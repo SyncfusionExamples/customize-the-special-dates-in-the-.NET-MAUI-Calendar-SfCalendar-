@@ -11,7 +11,7 @@
     <ContentPage.Content>
         <calendar:SfCalendar x:Name="calendar">
             <calendar:SfCalendar.MonthView>
-                <calendar:CalendarMonthView SpecialDates="{Binding SpecialDatesList}"
+                <calendar:CalendarMonthView x:DataType="local:CalendarViewModel" SpecialDates="{Binding SpecialDatesList}"
                                             SpecialDatesBackground="#C9BDF2">
                     <calendar:CalendarMonthView.SpecialDatesTextStyle>
                         <calendar:CalendarTextStyle TextColor="Red"
