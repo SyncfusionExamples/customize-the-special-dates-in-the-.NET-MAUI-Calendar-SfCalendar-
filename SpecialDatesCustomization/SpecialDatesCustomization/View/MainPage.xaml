@@ -5,14 +5,10 @@
              xmlns:local="clr-namespace:SpecialDatesCustomization"
              x:Class="SpecialDatesCustomization.MainPage">
 
-    <ContentPage.BindingContext>
-        <local:CalendarViewModel />
-    </ContentPage.BindingContext>
     <ContentPage.Content>
         <calendar:SfCalendar x:Name="calendar">
             <calendar:SfCalendar.MonthView>
-                <calendar:CalendarMonthView x:DataType="local:CalendarViewModel" SpecialDates="{Binding SpecialDatesList}"
-                                            SpecialDatesBackground="#C9BDF2">
+                <calendar:CalendarMonthView SpecialDatesBackground="#C9BDF2">
                     <calendar:CalendarMonthView.SpecialDatesTextStyle>
                         <calendar:CalendarTextStyle TextColor="Red"
                                                     FontAttributes="Bold,Italic"
@@ -22,5 +18,8 @@
             </calendar:SfCalendar.MonthView>
         </calendar:SfCalendar>
     </ContentPage.Content>
+    <ContentPage.Behaviors>
+        <local:SpecialDatesBehavior/>
+    </ContentPage.Behaviors>
 
 </ContentPage>
