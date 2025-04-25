@@ -1,4 +1,6 @@
-﻿namespace SpecialDatesCustomization;
+﻿using Syncfusion.Maui.Calendar;
+
+namespace SpecialDatesCustomization;
 
 public partial class MainPage : ContentPage
 {
